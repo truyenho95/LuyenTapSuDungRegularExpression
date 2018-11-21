@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title> Kiểm tra chuỗi đưa vào có đúng dạng dd/mm/yyyy</title>
+</head>
+<body>
+  <script>
+    function checkDayValid(str) {
+      var myDay = /\b(0?[1-9]|[12]\d|3[01])[\/\-.](0?[1-9]|[(10|11|12)])[\/\-.](\d{2}|\d{4})\b/;
+      if (myDay.test(str)){
+        alert("Ngày/tháng/năm bạn nhập vào đúng định dạng!");
+      } else  {
+        alert("Ngày/tháng/năm bạn nhập vào không đúng định dạng dd/mm/yyyy");
+      }
+    }
+    var testDay = prompt("Nhập ngày tháng năm sinh của bạn");
+    checkDayValid(testDay);
+  </script>
+</body>
+</html>

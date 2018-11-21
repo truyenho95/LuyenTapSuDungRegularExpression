@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Đếm số nguyên âm và phụ âm</title>
+</head>
+<body>
+  <script>
+    function demNguyenAmPhuAm(str) {
+      var nguyenAmRegex = /[ueoai]/gmi;
+      var nguyenAmArray = str.match(nguyenAmRegex);
+      console.log(`Số nguyên âm trong chuỗi là: ${nguyenAmArray.length}`);
+      var letterRegex = /[a-z]/gmi;
+      var letterArray = str.match(letterRegex);
+      console.log(`Số phụ âm trong chuỗi là: ${letterArray.length-nguyenAmArray.length}`);
+    }
+    var test = prompt("Nhập một chuỗi");
+    demNguyenAmPhuAm(test);
+  </script>
+</body>
+</html>

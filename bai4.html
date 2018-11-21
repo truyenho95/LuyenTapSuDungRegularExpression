@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mã số bảo mật hợp lệ</title>
+</head>
+<body>
+  <script>
+    function checkCode(str) {
+      var myRegexp = /^\d{3}-\d{4}-\d{3}$/;
+      if(myRegexp.test(str)){
+        alert("Code is valid");
+      } else {
+        alert("Code is not valid ");
+      }
+    }
+    var myCode = prompt("Nhập mã của bạn");
+    checkCode(myCode);  
+  </script>
+</body>
+</html>
